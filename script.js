@@ -80,7 +80,6 @@ function game() {
         break;
       } //switch
 
-      newMessage += "Click anywhere to start a new game.";
       this.updateMessage(newMessage);
 
       $(".open").removeClass("open");
