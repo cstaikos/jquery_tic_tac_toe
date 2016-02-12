@@ -19,6 +19,10 @@
   font-size: 150px;
 }
 
+.open {
+  cursor: pointer;
+}
+
 .open:hover {
   background-color: #e2dbe0;
 }
