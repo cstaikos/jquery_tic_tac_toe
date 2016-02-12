@@ -6,7 +6,7 @@ $(document).on('ready', function() {
 function game() {
 
   this.init = function() {
-    $(".square").addClass("open").text("");
+    $(".square").addClass("open").text("").css({"background-color": "white"});
 
     this.currentPlayer = "X";
 
@@ -38,6 +38,7 @@ function game() {
     for (i=0; i<winningSequences.length; i++) {
       if ($(winningSequences[i]).text() === winningString) {
         gameWon = true;
+        $(winningSequences[i]).css({"background-color": "green"});
       }
     }
 
@@ -83,7 +84,7 @@ function game() {
       this.updateMessage(newMessage);
 
       $(".open").removeClass("open");
-      alert("Would you like to play again?");
+      alert("Click ok to restart the game.");
       this.init();
 
       return true;
